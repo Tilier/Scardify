@@ -83,13 +83,18 @@
                 <image src="" width="207" height="448" style="display:none; border-radius: 7.5px" id="imgViewer">
                 </image>
             </div>
+            <div style="display:flex;justify-content:center;align-items:center;margin-top:20px">
+                <button id="downloadBtn" style="margin-top: 20px; display: none" href="" download>download</button>
+            </div>
         </div>
     </div>
 
     <script>
         function showImage() {
             document.getElementById('imgViewer').src = `https://SpotifyCardBot.aquarial.repl.co/website?name=${document.getElementById('nameInput').value}&artist=${document.getElementById('artistInput').value}&cover=${document.getElementById('coverInput').value}`
+            document.getElementById('downloadBtn').href = `https://SpotifyCardBot.aquarial.repl.co/website?name=${document.getElementById('nameInput').value}&artist=${document.getElementById('artistInput').value}&cover=${document.getElementById('coverInput').value}`
             document.getElementById('imgViewer').style.display = "block"
+            document.getElementById('downloadBtn').style.display = "block"
         }
     </script>
 </body>
