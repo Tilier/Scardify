@@ -28,6 +28,12 @@ Canvas.loadImage(`${req.query.cover}`)
   const buffer = canvas.toBuffer("image/png");
   let string = randomString(20, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
   fs.writeFileSync(`./images/${string}.png`, buffer);
-  res.sendFile(path.join(__dirname, './images', `${string}.png`));
+  if (typeof req.query.download == "undefined") {
+    res.sendFile(path.join(__dirname, './images', `${string}.png`));
+  } else {
+    if (req.query.download == "true") {
+  res.download(`./images/${string}.png`, `${req.query.name} by ${req.query.artist} - spotify card`)
+    }
+  }
   
 });
