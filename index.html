@@ -84,7 +84,7 @@
                 </image>
             </div>
             <div style="display:flex;justify-content:center;align-items:center;margin-top:20px">
-                <a id="downloadBtn" style="margin-top: 20px; display: none" href=""><button>download</button></a>
+                <a id="downloadBtn" style="margin-top: 20px; display: none" href="">download</a>
             </div>
         </div>
     </div>
@@ -96,7 +96,7 @@
             document.getElementById('imgViewer').style.display = "block"
             document.getElementById('downloadBtn').style.display = "block"
             
-            document.getElementById('downloadBtn').download = `{document.getElementById('nameInput').value} by {document.getElementById('artistInput').value} - spotify card`
+            document.getElementById('downloadBtn').download = `${document.getElementById('nameInput').value} by ${document.getElementById('artistInput').value} - spotify card`
         }
     </script>
 </body>
