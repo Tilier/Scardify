@@ -96,7 +96,7 @@
             document.getElementById('imgViewer').style.display = "block"
             document.getElementById('downloadBtn').style.display = "block"
             
-            document.getElementById('downloadBtn').download = `https://SpotifyCardBot.aquarial.repl.co/website?name=${document.getElementById('nameInput').value}&artist=${document.getElementById('artistInput').value}&cover=${document.getElementById('coverInput').value}`
+            document.getElementById('downloadBtn').download = `{document.getElementById('nameInput').value} by {document.getElementById('artistInput').value} - spotify card`
         }
     </script>
 </body>
